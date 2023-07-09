@@ -34,15 +34,16 @@ dgeo <- dgeo[dgeo$Region == "Región de Valparaíso",]
 parametros <- list(
   color = "#236478",
   font_family = "Raleway",
-  tabla_datos = "estaciones_datos",
-  tabla_estaciones = "estaciones"
-)
+  font_family_code = "Source Code Pro"
+  )
 
 theme_odes <-  bs_theme(
   version = 5,
   primary = parametros$color,
-  base_font = font_google(parametros$font_family)
+  base_font = font_google(parametros$font_family),
+  code_font = font_google(parametros$font_family_code)
 )
+
 
 # options -----------------------------------------------------------------
 opt_variables <- c(

@@ -25,28 +25,28 @@ function(input, output, session) {
       htmlwidgets::onRender("function(el, x) { L.control.zoom({ position: 'topright' }).addTo(this) }") |>
       setView(lng =  -70.74827, lat = -32.95694, zoom = 9) |>
       leafem::addLogo(
-        img = "https://odes-chile.org/img/logo.png",
+        img = "https://raw.githubusercontent.com/ODES-Chile/odes-unidades-shiny-app/main/www/logo.png",
         src= "remote",
         position = "bottomleft",
-        offset.x = 5,
+        offset.x = 15,
         offset.y = 5,
-        ) |>
-      leaflet.extras::addSearchOSM(
-        options = leaflet.extras::searchOptions(
-          textErr = "Ubicación no encontrada",
-          textCancel = "Cancelar",
-          textPlaceholder = "Buscar...",
-          position = "bottomright"
         )
-      ) |>
-      addEasyButton(
-        easyButton(
-          position = "bottomright",
-          icon = "fa-crosshairs",
-          title = "Mi ubicación",
-          onClick = JS("function(btn, map){ map.locate({setView: true}); }")
-          )
-      )
+      # leaflet.extras::addSearchOSM(
+      #   options = leaflet.extras::searchOptions(
+      #     textErr = "Ubicación no encontrada",
+      #     textCancel = "Cancelar",
+      #     textPlaceholder = "Buscar...",
+      #     position = "bottomright"
+      #   )
+      # ) |>
+      # addEasyButton(
+      #   easyButton(
+      #     position = "bottomright",
+      #     icon = "fa-crosshairs",
+      #     title = "Mi ubicación",
+      #     onClick = JS("function(btn, map){ map.locate({setView: true}); }")
+      #     )
+      # )
 
   })
 
