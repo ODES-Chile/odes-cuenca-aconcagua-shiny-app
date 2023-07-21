@@ -1,0 +1,13 @@
+name: odes-cuenca-aconcagua-shiny-app
+title: odes-cuenca-aconcagua-shiny-app
+username:
+account: frzambra
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 9458123
+bundleId: 7458312
+url: https://frzambra.shinyapps.io/odes-cuenca-aconcagua-shiny-app/
+when: 1689368126.38391
+lastSyncTime: 1689368126.38392
+asMultiple: FALSE
+asStatic: FALSE

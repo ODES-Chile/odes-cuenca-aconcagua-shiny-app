@@ -13,7 +13,7 @@ page_navbar(
   fillable = TRUE,
   fillable_mobile = TRUE,
   # mapa --------------------------------------------------------------------
-  bslib::nav(
+  bslib::nav_panel(
     title = "Vulnerabilidad",
     tags$head(
       # Include our custom CSS
@@ -21,16 +21,17 @@ page_navbar(
     ),
     layout_sidebar(
       sidebar = sidebar(
+        width = 400,
         selectInput("variable", tags$small("Variable"), opt_variables)
         ),
       leafletOutput("map", width="100%", height="100%")
     )
   ),
-  nav(
+  bslib::nav(
     title = "Biodiversidad",
     "Próximamente"
   ),
-  nav(
+  bslib::nav(
     title = "Huertos",
     "Próximamente"
   ),
